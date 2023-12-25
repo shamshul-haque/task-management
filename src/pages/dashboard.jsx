@@ -27,7 +27,7 @@ const Dashboard = () => {
   return (
     <div className="pt-32 pb-5">
       <Container>
-        <div className="flex flex-col md:flex-row gap-5">
+        <div className="flex flex-col lg:flex-row gap-5">
           <div className="bg-white shadow-md min-h-screen p-5 text-center">
             <img
               src={user?.photoURL}
