@@ -1,8 +1,13 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import SocialLogin from "../components/SocialLogin";
+import useAuth from "../hooks/useAuth";
 
 const Register = () => {
+  const { createUser, updateUserProfile, logoutUser } = useAuth();
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -12,7 +17,22 @@ const Register = () => {
 
   const onSubmit = (data) => {
     reset();
-    console.log(data);
+    createUser(data?.email, data?.password)
+      .then(() => {
+        updateUserProfile(data?.name, data?.photo);
+        logoutUser();
+        navigate("/login");
+        toast?.success("You are Registered Now!", {
+          position: "top-center",
+          theme: "colored",
+        });
+      })
+      .catch((err) => {
+        toast?.error(err?.code, {
+          position: "top-center",
+          theme: "colored",
+        });
+      });
   };
 
   return (
