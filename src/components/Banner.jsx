@@ -27,7 +27,7 @@ const Banner = () => {
               you work. Embrace efficiency like never before {"– it's"} time to
               make every task count!
             </p>
-            <Link to="/">
+            <Link to="/dashboard">
               <Button />
             </Link>
           </div>

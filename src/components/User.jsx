@@ -1,17 +1,17 @@
 import Container from "./Container";
 
-const Tips = () => {
-  const tips = [
-    "Prioritize Tasks",
-    "Time Blocking",
-    "Break Down Big Goals",
-    "Set Deadlines",
-    "Limit Multitasking",
-    "Regular Breaks",
-    "Utilize Task Labels",
-    "Review and Reflect",
-    "Learn to Delegate",
-    "Embrace Technology",
+const User = () => {
+  const usingPeople = [
+    "Project Manager",
+    "UI/UX Designer",
+    "Web Designer",
+    "Web Developer",
+    "App Developer",
+    "Software Engineer",
+    "DevOps Engineer",
+    "Doctor",
+    "Banker",
+    "Lower",
   ];
   return (
     <div className="py-10 text-center">
@@ -24,7 +24,7 @@ const Tips = () => {
       </p>
       <Container>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-5 mt-5">
-          {tips.map((tip, idx) => (
+          {usingPeople.map((tip, idx) => (
             <div key={idx} className="bg-white shadow-md p-5">
               {tip}
             </div>
@@ -35,4 +35,4 @@ const Tips = () => {
   );
 };
 
-export default Tips;
+export default User;

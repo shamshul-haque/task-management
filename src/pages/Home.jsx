@@ -1,11 +1,11 @@
 import Banner from "../components/Banner";
-import Tips from "../components/Tips";
+import User from "../components/User";
 
 const Home = () => {
   return (
     <div className="pt-20">
       <Banner />
-      <Tips />
+      <User />
     </div>
   );
 };
